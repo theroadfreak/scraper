@@ -1,12 +1,12 @@
-# import requests
-# from bs4 import BeautifulSoup
-from csv import writer
 from buzz import buzz
+from nikeBG import nikeBG
+from utils import myPrint
 
 in_ = input('ime: ')
-buzz = buzz(in_)
 
-for n in range(buzz.size):
-    print(buzz.titles[n],'    ',buzz.prices[n])
-    print('_________________________________________________________________________')
+myPrint(buzz(in_))
+
+myPrint(nikeBG(in_))
+
+
 

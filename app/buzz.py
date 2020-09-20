@@ -1,29 +1,17 @@
 import requests
 from bs4 import BeautifulSoup
+from utils import myString
+
 
 class buzz():
 
     def __init__(self, input_):
+        self.name = "BUZZ"
         self.titles= list()
         self.prices = list()
         self.size = 0
 
-        input_ = input_.split(' ')
-        # print(input_)
-        for n in range(len(input_)):
-            temp = list()
-            if input_[n] != "":
-                temp.append(input_[n])
-        input_ = temp
-
-
-        last = input_[len(input_)-1]
-        input_.remove(last)
-        final = str()
-
-        for words in input_:
-            final += str(words) + "+"
-        final += last
+        final = myString(input_)
 
         # print(final)
 
